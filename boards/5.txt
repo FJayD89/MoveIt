@@ -1,0 +1,6 @@
+..aabb
+..cdef
+xxcdef
+..gghh
+......
+......
