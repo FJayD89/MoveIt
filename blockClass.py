@@ -15,3 +15,7 @@ class OptimalBlock:
     def __init__(self, length, vertical, x, y, name):
         self.length, self.vertical, self.x, self.y, self.name = length, vertical, x, y, name
         blocks[self.name] = self
+
+
+def fromBlock():
+    return None
