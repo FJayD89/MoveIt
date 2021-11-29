@@ -1,0 +1,33 @@
+from blockClass import *
+
+mBlocksSetup = [
+    OptimalBlock(2,0,0,0,'a')
+]
+
+activeBlockList = [fromBlock(block) for block in mBlocksSetup]
+
+def makeMove(move, blocks_setup):
+    name = move[0]
+    blocks_setup[name] = moveBlock(move[1], blocks_setup[name])
+    return a
+
+def moveBlock(direction, block):
+    newBlock = fromBlock(block)
+    moveDirection = 2*direction - 1
+    newBlock.x += moveDirection * (1-newBlock.vertical)
+    newBlock.y += moveDirection * newBlock.vertical
+    return newBlock
+
+ml1 = [
+    ['c',1],
+    ['c',1]
+]
+
+ml2 = [
+    ['c',1],
+    ['c',1],
+    ['c',1],
+    ['c',0],
+]
+
+# def equivalent(move_list1, move_list2, blocks_setup):
