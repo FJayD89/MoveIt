@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44966d2c-a94f-40a3-8952-e0f0af64d794" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/betterSearch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,7 +228,26 @@
       <option name="presentableId" value="Default" />
       <updated>1621686486775</updated>
     </task>
+    <task id="LOCAL-00001" summary="started betterSearch">
+      <created>1638185622606</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1638185622606</updated>
+    </task>
+    <task id="LOCAL-00002" summary="started betterSearch">
+      <created>1638185675492</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1638185675493</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="started betterSearch" />
+    <option name="LAST_COMMIT_MESSAGE" value="started betterSearch" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
