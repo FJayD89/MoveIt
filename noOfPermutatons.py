@@ -25,8 +25,8 @@ def placeCar(board, car):
 
 def permutaions(board):
 	global cars, carsPlaced
-	cars = board.blocks
-	board.blocks = []
+	cars = board.allBlocks
+	board.allBlocks = []
 	foundPositions = 0
 	carsPlaced = 0
 	placeCar(board, cars[0])

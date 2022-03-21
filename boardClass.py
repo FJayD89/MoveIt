@@ -148,11 +148,11 @@ class Board:
         self.blocks = self.OGs
         self.update()
 
-    def moves(self):
-        moves = []
-        for block in self.blocks:
-            for cmd in self.cmds.keys():
-                if self.moveCheck(block, cmd):
-                    moves.append(block.name + cmd)
-
-        return moves
+    # def moves(self):
+    #     moves = []
+    #     for block in self.blocks:
+    #         for cmd in self.cmds.keys():
+    #             if self.moveCheck(block, cmd):
+    #                 moves.append(block.name + cmd)
+    #
+    #     return moves

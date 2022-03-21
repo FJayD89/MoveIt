@@ -1,0 +1,5 @@
+how am i going to do this
+for every car, if it's paralell to the winDir, check if intersects winPath
+for cars other than wincar, there can be paralell cars in front, so check for that as well
+
+when returning multiple values from a function, do we want an object?

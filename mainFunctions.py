@@ -3,29 +3,11 @@ from blockClass import *
 checksMade = 0
 
 
-def winCheck(board):
-    global checksMade
-    checksMade += 1
-    if blocks[board.winBlock].x == board.winX and \
-            blocks[board.winBlock].y == board.winY:
-        return True
 
 
-def freeMoveSpace(board, block, direction):
-    space = 0
-    relevantSize = direction * ((1 - block.vertical) * board.width + block.vertical * board.height)
-    relevantPos = (1 - block.vertical) * block.x + block.vertical * block.y
-    for i in range(relevantPos+direction*block.length, relevantSize, 2*direction-1):
-        cell = board.board[(1 - block.vertical) * i + block.vertical * block.x]\
-                       [block.vertical * i + (1 - block.vertical) * block.y]
-        if not (cell == '.' or cell == block.name):
-            break
-        space += 1
-    return space
 
-
-def moveCheck(board, move, last_move):
-    block = blocks[move[0]]
+def moveCheck(board_size, blocks, move, last_move):
+    block = allBlocks[move[0]]
     loHiDifference = move[1]*(block.length + 1)
     xNew = block.x + (1 - block.vertical) * (loHiDifference - 1)
     yNew = block.y + block.vertical * (loHiDifference - 1)
@@ -33,7 +15,7 @@ def moveCheck(board, move, last_move):
     if not last_move == [block.name, 0]:
         # check if touching high wall
 
-        relevantSize = [board.width, board.height][block.vertical]
+        relevantSize = board_size[block.vertical]
         relevantHigh = block.length + [block.x, block.y][block.vertical]
         if not relevantSize == relevantHigh:
             # check if space empty
@@ -44,9 +26,9 @@ def moveCheck(board, move, last_move):
     return 0
 
 
-def moves(board, last_cmd):
+def moves(blocks, board_size, last_cmd):
     moves = []
-    for block in board.blocks:
+    for block in blocks:
         multiplier = moveCheck(board, [block.name, 0], last_cmd)
         if not multiplier == 0:
             # append to list
@@ -60,7 +42,7 @@ def moves(board, last_cmd):
 
 
 def update(board, cmd):
-    block = blocks[cmd[0]]
+    block = allBlocks[cmd[0]]
 
     newDifference = cmd[1] * (block.length + 1) - 1
     newX = block.x + (1 - block.vertical) * newDifference
@@ -85,8 +67,21 @@ def multiUpdate(board, cmd_list):
         update(board, cmd)
 
 
+def freeMoveSpace(board, win_block, direction):
+    space = 0
+    relevantSize = direction * ((1 - win_block.vertical) * board.width + win_block.vertical * board.height)
+    relevantPos = (1 - win_block.vertical) * win_block.x + win_block.vertical * win_block.y
+    for i in range(relevantPos + direction * win_block.length, relevantSize, 2 * direction - 1):
+        cell = board.board[(1 - win_block.vertical) * i + win_block.vertical * win_block.x]\
+                       [win_block.vertical * i + (1 - win_block.vertical) * win_block.y]
+        if not (cell == '.' or cell == win_block.name):
+            break
+        space += 1
+    return space
+
+
 def pathClear(board):
-    block = blocks[board.winBlock]
+    block = allBlocks[board.winBlock]
     relevantPos = [block.x, block.y][block.vertical]
     relevantWinPos = (1-block.vertical)*board.winX + block.vertical*board.winY
     distToExit = relevantWinPos - relevantPos
