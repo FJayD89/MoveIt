@@ -9,12 +9,18 @@ from textToBoard import textToBoard
 
 # board = Board(6, 6, [x, o, q, p], x, 4, 2)
 # board = textToBoard('boards/board.txt', 'x', 4, 2)
-board = textToBoard('boards/' + input('Enter the filename:'), 'x')
+board = textToBoard('boards/' + input('Enter the filename: '), input('Enter the win_name: '))
 
 board_size = board[0]
 board_blocks = board[1]
-board_win_name = 'x'
-board_win_pos = [4, 2]
+board_win_name = list(board_blocks.keys())[0]
+board_txt = board[2]
+exit_direction = int(input('Enter the exit_direction (-1/1): '))
+win_block = board_blocks[board_win_name]
+board_win_pos = [0, 0]  # default
+board_win_pos[1-win_block.vertical] = win_block.pos[1-win_block.vertical]
+board_win_pos[win_block.vertical] = int((board_size[win_block.vertical]-win_block.length)*(1+exit_direction)/2)
+
 gameEnded = False
 maxDepth = 2  # don't change these!!!
 depth = 0
@@ -25,7 +31,7 @@ OGpos = {}
 startTime = time.time()
 print(startTime)
 print('Starting position:')
-print(board[-1])
+print(board_txt)
 
 for block in allBlocks.values():
     OGpos[block.name] = [block.x, block.y]
@@ -81,7 +87,7 @@ def recurse(last_cmd, game_board=0, game_depth=0, move_list=0, game_ended=0):
             # print(str(checksMade) + ' checks were made')
             print(moveList)
             return 0
-        distToExit = pathClear(board_blocks, board_win_name)
+        distToExit = pathClear(board_blocks, board_win_name, board_size)
         if not distToExit == 0:
             gameEnded = True
             for i in range(distToExit):
@@ -105,3 +111,4 @@ clear = pathClear(board_blocks, 'x', board_size, 1)
 moves = moves(board_blocks, board_size)
 print('clear:', clear)
 print('moves:', moves)
+print('bwp:', board_win_pos)

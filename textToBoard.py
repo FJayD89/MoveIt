@@ -44,7 +44,7 @@ def textToBoard(file_name, win_name):
     # create a dict name:block
     boardBlocks = {block.name: block for block in boardBlocks}
 
-    return [[len(boardLines[0]), len(boardLines)], boardBlocks, winBlock, txt]
+    return [[len(boardLines[0]), len(boardLines)], boardBlocks, txt]
 
 
 if __name__ == "__main__":

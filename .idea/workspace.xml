@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="44966d2c-a94f-40a3-8952-e0f0af64d794" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/betterSearch.py" beforeDir="false" afterPath="$PROJECT_DIR$/betterSearch.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boards/board.txt" beforeDir="false" afterPath="$PROJECT_DIR$/boards/board.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spaceNotes" beforeDir="false" afterPath="$PROJECT_DIR$/spaceNotes" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/textToBoard.py" beforeDir="false" afterPath="$PROJECT_DIR$/textToBoard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/times.txt" beforeDir="false" afterPath="$PROJECT_DIR$/times.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -309,7 +305,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648282957785</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="fixed textToBoard.py&#10;moves() now works properly">
+      <created>1648290444580</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1648290444580</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -328,7 +331,8 @@
     <MESSAGE value="equivalent probably done (at like midnight)" />
     <MESSAGE value="pathClear hopefully done 21.3." />
     <MESSAGE value="added times.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="added times.txt" />
+    <MESSAGE value="fixed textToBoard.py&#10;moves() now works properly" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed textToBoard.py&#10;moves() now works properly" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
