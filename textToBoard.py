@@ -6,7 +6,7 @@ def textToBoard(file_name, win_name):
     f = open(file_name, 'r')
     txt = f.read()
     boardLines = txt.split('\n')
-
+    lineLength = len(boardLines[0])
     names = allBlocks.keys()
     boardBlocks = []
 
@@ -23,7 +23,7 @@ def textToBoard(file_name, win_name):
                 # check verticality and create a somewhat empty new optimalBlock
                 vertical = 1
                 peek = '.'
-                if not x == len(boardLines)-1:
+                if not x == lineLength-1:
                     peek = boardLines[y][x + 1]
                 if peek == cell:
                     vertical = 0

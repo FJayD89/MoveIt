@@ -101,6 +101,7 @@ def recurse(last_cmd, game_board=0, game_depth=0, move_list=0, game_ended=0):
 #
 # print(freeMoveSpace(board, blocks['b'], 1))
 
-clear = pathClear(board_blocks, 'a', board_size, -1)
-
-print(clear)
+clear = pathClear(board_blocks, 'x', board_size, 1)
+moves = moves(board_blocks, board_size)
+print('clear:', clear)
+print('moves:', moves)

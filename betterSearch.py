@@ -57,15 +57,16 @@ def pathClear(blocks, moving_block_name, board_size, direction):
             if difference < pathLength:   # if checking the block is going to actually yield new info
                 if block.vertical == 1 - moving_block.vertical:  # if perpendicular
                     lowest_pos = block.pos[block.vertical]
-                    if lowest_pos <= moving_block.pos[1-moving_block.vertical] <= lowest_pos + block.length-1:
-                        pathLength = abs(difference) - (1 + direction) / 2
+                    if lowest_pos <= moving_block.pos[1-moving_block.vertical] <= lowest_pos + block.length-1:  # if in line of sight
+                        # pathLength = abs(difference) - (1 + direction) / 2
+                        pathLength = abs(difference)
                     break
                 # if not perpendicular, check if in same line
                 if block.pos[1-moving_block.vertical] == moving_block.pos[1-moving_block.vertical]:
                     # if dir = -1, subtract the block legth
                     pathLength = abs(difference) - block.length*(-direction+1)/2
 
-    return pathLength
+    return int(pathLength)
 
 
 def moveCheck(blocks_setup, board_size, move):
@@ -83,14 +84,13 @@ def moveCheck(blocks_setup, board_size, move):
 def moves(blocks_setup, board_size):
     possibleMoves = []
     for blockName in list(blocks_setup.keys()):
-        for magnitude in [1, -1]:
-            move = [blockName, magnitude]
-            if moveCheck(blocks_setup, board_size, move):
-                possibleMoves.append(move)
+        for direction in [1, -1]:
+            clear = pathClear(blocks_setup, blockName, board_size, direction)
+            shifts = list(range(clear+1)[1:])
+            newMoves = [[blockName, direction*shift] for shift in shifts]
+            possibleMoves += newMoves
 
     return possibleMoves
-
-# test commit
 
 
 def winCheck(win_name, win_pos):
