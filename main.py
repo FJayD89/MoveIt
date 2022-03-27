@@ -17,9 +17,7 @@ board_win_name = list(board_blocks.keys())[0]
 board_txt = board[2]
 exit_direction = int(input('Enter the exit_direction (-1/1): '))
 win_block = board_blocks[board_win_name]
-board_win_pos = [0, 0]  # default
-board_win_pos[1-win_block.vertical] = win_block.pos[1-win_block.vertical]
-board_win_pos[win_block.vertical] = int((board_size[win_block.vertical]-win_block.length)*(1+exit_direction)/2)
+board_win_pos = int((board_size[win_block.vertical]-win_block.length)*(1+exit_direction)/2)
 
 gameEnded = False
 maxDepth = 2  # don't change these!!!
@@ -64,51 +62,48 @@ for block in allBlocks.values():
 # print(str(board.winX) + ', ' + str(board.winY) + ', ' + board.winBlock)
 
 
-def recurse(last_cmd, game_board=0, game_depth=0, move_list=0, game_ended=0):
+def recurse(last_move):
     global depth, gameEnded, moveList
     depth += 1
     if not gameEnded:
-        if not depth == maxDepth:
-            # generate possible moves
-            for move in moves(board_blocks, last_cmd):
-                # do move
-                makeMove(board_blocks, move)
-                moveList.append(move)
-                recurse(move)
-                # revert move
-                makeMove(board_blocks, [move[0], 1 - move[1]])
-                moveList = moveList[:-1]
 
-        depth -= 1
-        if winCheck(board_win_name, board_win_pos):
+        if winCheck(board_blocks, board_win_name, board_win_pos, exit_direction):
             gameEnded = True
-            board.writeOut()
+            boardWriteOut(board_blocks)
+            win_block = board_blocks[board_win_name]
+            if not win_block.pos[win_block.vertical] == board_win_pos:
+                moveList.append([board_win_name, board_win_pos - win_block.pos[win_block.vertical]])
+
             print('Game won in ' + str(depth) + ' steps!')
             # print(str(checksMade) + ' checks were made')
             print(moveList)
             return 0
-        distToExit = pathClear(board_blocks, board_win_name, board_size)
-        if not distToExit == 0:
-            gameEnded = True
-            for i in range(distToExit):
-                moveList.append([board_win_name, board.winDirection])
-            print('Game won in ' + str(depth) + ' steps!')
-            print(moveList)
-            return 0
+
+        if not depth == maxDepth:
+            # generate possible moves
+            for move in moves(board_blocks, board_size, last_move):
+                # do move
+                makeMove(move, board_blocks)
+                moveList.append(move)
+                if recurse(move):
+                    return True
+                # revert move
+                makeMove([move[0], -move[1]], board_blocks)
+                moveList = moveList[:-1]
+
+        depth -= 1
+
+    pass
 
 
-# while not gameEnded:
-#     recurse('')
-#     print(str(time.time()) + ' Not ' + str(maxDepth - 1))
-#     maxDepth += 1
+while not gameEnded:
+    recurse([1, 0])
+    print(str(time.time() - startTime) + ' Not ' + str(maxDepth - 1))
+    maxDepth += 1
 
-# runTime = time.time()-startTime
-# print(runTime)
-#
-# print(freeMoveSpace(board, blocks['b'], 1))
+# clear = pathClear(board_blocks, 'h', board_size, -1)
+# print('clear:', clear)
 
-clear = pathClear(board_blocks, 'x', board_size, 1)
-moves = moves(board_blocks, board_size)
-print('clear:', clear)
-print('moves:', moves)
-print('bwp:', board_win_pos)
+# moves = moves(board_blocks, board_size, ['null', 0])
+# print('moves:', moves)
+# print('bwp:', board_win_pos)

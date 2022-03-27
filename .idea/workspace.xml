@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44966d2c-a94f-40a3-8952-e0f0af64d794" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/defaultInit.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/betterSearch.py" beforeDir="false" afterPath="$PROJECT_DIR$/betterSearch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boards/board.txt" beforeDir="false" afterPath="$PROJECT_DIR$/boards/board.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/textToBoard.py" beforeDir="false" afterPath="$PROJECT_DIR$/textToBoard.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spaceNotes" beforeDir="false" afterPath="$PROJECT_DIR$/spaceNotes.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,8 +65,8 @@
     <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python&#10;TEXT" />
     <property name="com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File" value="Python" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="advanced.settings" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/defaultInit.txt" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -98,6 +101,7 @@
       <method v="2" />
     </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="MoveIt" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -108,14 +112,13 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="REDIRECT_INPUT" value="true" />
+      <option name="INPUT_FILE" value="C:\aCoding\Python\PycharmProjects\MoveItSoC\defaultInit.txt" />
       <method v="2" />
     </configuration>
     <configuration name="mainFunctions" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
@@ -225,8 +228,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.textToBoard" />
         <item itemvalue="Python.tester" />
+        <item itemvalue="Python.textToBoard" />
         <item itemvalue="Python.average" />
         <item itemvalue="Python.scratch_1" />
         <item itemvalue="Python.šmar" />
@@ -312,7 +315,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648290444580</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="fixed up inputs">
+      <created>1648292085001</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1648292085001</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -332,7 +342,8 @@
     <MESSAGE value="pathClear hopefully done 21.3." />
     <MESSAGE value="added times.txt" />
     <MESSAGE value="fixed textToBoard.py&#10;moves() now works properly" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed textToBoard.py&#10;moves() now works properly" />
+    <MESSAGE value="fixed up inputs" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed up inputs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -343,9 +354,39 @@
           <option name="timeStamp" value="107" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>73</line>
+          <option name="timeStamp" value="136" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>74</line>
+          <option name="timeStamp" value="137" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/betterSearch.py</url>
-          <line>45</line>
-          <option name="timeStamp" value="117" />
+          <line>5</line>
+          <option name="timeStamp" value="138" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>85</line>
+          <option name="timeStamp" value="139" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>83</line>
+          <option name="timeStamp" value="141" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/betterSearch.py</url>
+          <line>52</line>
+          <option name="timeStamp" value="148" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/betterSearch.py</url>
+          <line>60</line>
+          <option name="timeStamp" value="149" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -358,8 +399,11 @@
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
+        <watch expression="board_blocks" language="Python" />
         <watch expression="depth" language="Python" />
         <watch expression="maxDepth" language="Python" />
+        <watch expression="moveList" language="Python" />
+        <watch expression="board_blocks[board_win_name].pos" language="Python" />
       </configuration>
     </watches-manager>
   </component>
