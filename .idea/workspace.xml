@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44966d2c-a94f-40a3-8952-e0f0af64d794" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/defaultInit.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/boards/6.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/boards/7.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/boards/8.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/boards/9.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/betterSearch.py" beforeDir="false" afterPath="$PROJECT_DIR$/betterSearch.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/boards/board.txt" beforeDir="false" afterPath="$PROJECT_DIR$/boards/board.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spaceNotes" beforeDir="false" afterPath="$PROJECT_DIR$/spaceNotes.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -322,7 +324,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648292085001</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="added and fixed a ton of stuff, including:&#10;makeMove better&#10;pathclear fixed, should finally work as intended&#10;added pathblocked, a simpler pathclear&#10;moves now doesn't move the same block twice&#10;added pathclear message&#10;simplified bwp&#10;switched wincheck and makeMove in recurse&#10;made the end to the recurse nicer">
+      <created>1648420934766</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1648420934766</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -336,6 +345,17 @@
       </list>
     </option>
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="more fromBlock" />
     <MESSAGE value="equivalent probably done (at like midnight)" />
@@ -343,7 +363,8 @@
     <MESSAGE value="added times.txt" />
     <MESSAGE value="fixed textToBoard.py&#10;moves() now works properly" />
     <MESSAGE value="fixed up inputs" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed up inputs" />
+    <MESSAGE value="added and fixed a ton of stuff, including:&#10;makeMove better&#10;pathclear fixed, should finally work as intended&#10;added pathblocked, a simpler pathclear&#10;moves now doesn't move the same block twice&#10;added pathclear message&#10;simplified bwp&#10;switched wincheck and makeMove in recurse&#10;made the end to the recurse nicer" />
+    <option name="LAST_COMMIT_MESSAGE" value="added and fixed a ton of stuff, including:&#10;makeMove better&#10;pathclear fixed, should finally work as intended&#10;added pathblocked, a simpler pathclear&#10;moves now doesn't move the same block twice&#10;added pathclear message&#10;simplified bwp&#10;switched wincheck and makeMove in recurse&#10;made the end to the recurse nicer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -354,38 +375,13 @@
           <option name="timeStamp" value="107" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>73</line>
-          <option name="timeStamp" value="136" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>74</line>
-          <option name="timeStamp" value="137" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/betterSearch.py</url>
-          <line>5</line>
-          <option name="timeStamp" value="138" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>85</line>
-          <option name="timeStamp" value="139" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>83</line>
-          <option name="timeStamp" value="141" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/betterSearch.py</url>
-          <line>52</line>
+          <line>53</line>
           <option name="timeStamp" value="148" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/betterSearch.py</url>
-          <line>60</line>
+          <line>61</line>
           <option name="timeStamp" value="149" />
         </line-breakpoint>
       </breakpoints>
@@ -404,6 +400,7 @@
         <watch expression="maxDepth" language="Python" />
         <watch expression="moveList" language="Python" />
         <watch expression="board_blocks[board_win_name].pos" language="Python" />
+        <watch expression="checksMade" language="Python" />
       </configuration>
     </watches-manager>
   </component>

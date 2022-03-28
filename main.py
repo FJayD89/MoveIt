@@ -63,7 +63,7 @@ for block in allBlocks.values():
 
 
 def recurse(last_move):
-    global depth, gameEnded, moveList
+    global depth, gameEnded, moveList, checksMade
     depth += 1
     if not gameEnded:
 
@@ -100,6 +100,7 @@ while not gameEnded:
     recurse([1, 0])
     print(str(time.time() - startTime) + ' Not ' + str(maxDepth - 1))
     maxDepth += 1
+    print(checksMade)
 
 # clear = pathClear(board_blocks, 'h', board_size, -1)
 # print('clear:', clear)

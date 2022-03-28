@@ -1,4 +1,5 @@
 from blockClass import *
+checksMade = 0
 
 
 def makeMove(move, blocks_setup):
@@ -127,8 +128,8 @@ def moves(blocks_setup, board_size, last_move):
 
 
 def winCheck(blocks_setup, win_name, win_pos, exit_direction):
-    # global checksMade
-    # checksMade += 1
+    global checksMade
+    checksMade += 1
     win_block = blocks_setup[win_name]
     if win_block.pos[win_block.vertical] == win_pos:
         return True
