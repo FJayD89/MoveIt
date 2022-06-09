@@ -63,7 +63,7 @@ for block in allBlocks.values():
 
 
 def recurse(last_move):
-    global depth, gameEnded, moveList
+    global depth, gameEnded, moveList, board_blocks
     depth += 1
     if not gameEnded:
 
@@ -82,7 +82,7 @@ def recurse(last_move):
         if not depth == maxDepth:
             # generate possible moves
             for move in moves(board_blocks, board_size, last_move):
-                # do move
+                # do move - actually changes board_blocks apparently
                 makeMove(move, board_blocks)
                 moveList.append(move)
                 if recurse(move):

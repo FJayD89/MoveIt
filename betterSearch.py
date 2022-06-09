@@ -66,7 +66,6 @@ def pathClear(blocks_setup, moving_block_name, board_size, direction):
                 if block.vertical == 1 - moving_block.vertical:  # if perpendicular
                     lowest_pos = block.pos[block.vertical]
                     if lowest_pos <= moving_block.pos[1-moving_block.vertical] <= lowest_pos + block.length-1:  # if in line of sight
-                        # pathLength = abs(difference) - (1 + direction) / 2
                         pathLength = abs(difference)
                         continue
                 # if not perpendicular, check if in same line
@@ -118,7 +117,7 @@ def moves(blocks_setup, board_size, last_move):
             continue
         for direction in [1, -1]:
             clear = pathClear(blocks_setup, blockName, board_size, direction)
-            shifts = list(range(clear+1)[1:])
+            shifts = list(range(1,clear+1))
             newMoves = [[blockName, direction*shift] for shift in shifts]
             possibleMoves += newMoves
             # if clear >= 1:
