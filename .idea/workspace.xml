@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44966d2c-a94f-40a3-8952-e0f0af64d794" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/MoveIt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MoveIt.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/betterSearch.py" beforeDir="false" afterPath="$PROJECT_DIR$/betterSearch.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boards/board.txt" beforeDir="false" afterPath="$PROJECT_DIR$/boards/board.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/defaultInit.txt" beforeDir="false" afterPath="$PROJECT_DIR$/defaultInit.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="44966d2c-a94f-40a3-8952-e0f0af64d794" name="Default Changelist" comment="added boards 6-9" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
